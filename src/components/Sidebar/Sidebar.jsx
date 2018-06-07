@@ -9,12 +9,17 @@ import {
   List,
   ListItem,
   ListItemIcon,
-  ListItemText
+  ListItemText,
 } from "material-ui";
+
+import {
+ Launch
+} from "@material-ui/icons";
 
 import { HeaderLinks } from "components";
 
 import sidebarStyle from "assets/jss/material-dashboard-react/sidebarStyle.jsx";
+//import { Icon } from "material-ui";
 
 const Sidebar = ({ ...props }) => {
   // verifies if routeName is the one active (in browser input)
@@ -48,7 +53,13 @@ const Sidebar = ({ ...props }) => {
                 className={classes.itemText + whiteFontClasses}
                 disableTypography={true}
               />
+              { prop.isLancher &&
+               <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
+              <Launch />
+              </ListItemIcon>
+              }
             </ListItem>
+            
           </NavLink>
         );
       })}
@@ -56,7 +67,7 @@ const Sidebar = ({ ...props }) => {
   );
   var brand = (
     <div className={classes.logo}>
-      <a href="https://www.creative-tim.com" className={classes.logoLink}>
+      <a href="/#" className={classes.logoLink}>
         <div className={classes.logoImage}>
           <img src={logo} alt="logo" className={classes.img} />
         </div>
