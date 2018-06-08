@@ -9,7 +9,9 @@ import {
   List,
   ListItem,
   ListItemIcon,
+  IconButton,
   ListItemText,
+  ListItemSecondaryAction,
 } from "material-ui";
 
 import {
@@ -54,9 +56,14 @@ const Sidebar = ({ ...props }) => {
                 disableTypography={true}
               />
               { prop.isLancher &&
-               <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
-              <Launch />
-              </ListItemIcon>
+              
+
+              <ListItemSecondaryAction>
+              <IconButton aria-label="link"  className={classes.itemIcon + whiteFontClasses}>
+                <Launch />
+              </IconButton>
+            </ListItemSecondaryAction>
+
               }
             </ListItem>
             
