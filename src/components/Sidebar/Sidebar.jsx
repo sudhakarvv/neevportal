@@ -21,6 +21,7 @@ import {
 import { HeaderLinks } from "components";
 
 import sidebarStyle from "assets/jss/material-dashboard-react/sidebarStyle.jsx";
+import '../Sidebar/Sidebar.css';
 //import { Icon } from "material-ui";
 
 const Sidebar = ({ ...props }) => {

@@ -19,10 +19,9 @@ LiveHelp,
   Notifications
 } from "@material-ui/icons";
 
-
 const dashboardRoutes = [
     {
-    path: "/servicedesk",
+    path: "/home/servicedesk",
     sidebarName: "Service Desk",
     navbarName: "Service Desk",
     icon: Dashboard,
@@ -30,14 +29,14 @@ const dashboardRoutes = [
     url: "http://www.google.com",
   },
   {
-    path: "/calender",
+    path: "/home/calender",
     sidebarName: "Calender",
     navbarName: "Calender",
     icon: Schedule,
     component: Calender
   },
   {
-    path: "/assetmanager",
+    path: "/home/assetmanager",
     sidebarName: "Asset Manager",
     navbarName: "Asset Manager",
     icon: Devices,
@@ -45,7 +44,7 @@ const dashboardRoutes = [
     url: "http://www.google.com",
   },
   {
-    path: "/helpcenter",
+    path: "/home/helpcenter",
     sidebarName: "Help center",
     navbarName: "Help center",
     icon: LiveHelp,
@@ -53,28 +52,28 @@ const dashboardRoutes = [
     url: "http://www.google.com",
   },
   {
-    path: "/fileexchange",
+    path: "/home/fileexchange",
     sidebarName: "File exchange",
     navbarName: "File exchange",
     icon: CreateNewFolder,
     component: FileExchange
   },
   {
-    path: "/roster",
+    path: "/home/roster",
     sidebarName: "Roster",
     navbarName: "Roster",
     icon: Person,
     component: Roster
   },
   {
-    path: "/monitoring",
+    path: "/home/monitoring",
     sidebarName: "Monitoring",
     navbarName: "Monitoring",
     icon: TrackChanges,
     isLauncher: true,
     url: "http://www.google.com",
-    },
-  { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
+  },
+  { redirect: true, path: "/home", to: "/home/dashboard", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
