@@ -26,8 +26,8 @@ const dashboardRoutes = [
     sidebarName: "Service Desk",
     navbarName: "Service Desk",
     icon: Dashboard,
-    isLancher: true,
-    component: DashboardPage
+    isLauncher: true,
+    url: "http://www.google.com",
   },
   {
     path: "/calender",
@@ -41,16 +41,16 @@ const dashboardRoutes = [
     sidebarName: "Asset Manager",
     navbarName: "Asset Manager",
     icon: Devices,
-    isLancher: true,
-    component: DashboardPage
+    isLauncher: true,
+    url: "http://www.google.com",
   },
   {
     path: "/helpcenter",
     sidebarName: "Help center",
     navbarName: "Help center",
     icon: LiveHelp,
-    isLancher: true,
-    component: DashboardPage
+    isLauncher: true,
+    url: "http://www.google.com",
   },
   {
     path: "/fileexchange",
@@ -71,9 +71,9 @@ const dashboardRoutes = [
     sidebarName: "Monitoring",
     navbarName: "Monitoring",
     icon: TrackChanges,
-    isLancher: true,
-    component: Roster
-  },
+    isLauncher: true,
+    url: "http://www.google.com",
+    },
   { redirect: true, path: "/", to: "/dashboard", navbarName: "Redirect" }
 ];
 

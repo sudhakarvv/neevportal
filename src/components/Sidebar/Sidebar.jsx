@@ -15,7 +15,7 @@ import {
 } from "material-ui";
 
 import {
- Launch
+  Launch
 } from "@material-ui/icons";
 
 import { HeaderLinks } from "components";
@@ -39,36 +39,49 @@ const Sidebar = ({ ...props }) => {
         const whiteFontClasses = cx({
           [" " + classes.whiteFont]: activeRoute(prop.path)
         });
-        return (
-          <NavLink
-            to={prop.path}
-            className={classes.item}
-            activeClassName="active"
-            key={key}
-          >
-            <ListItem button className={classes.itemLink + listItemClasses}>
-              <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
-                <prop.icon />
-              </ListItemIcon>
-              <ListItemText
-                primary={prop.sidebarName}
-                className={classes.itemText + whiteFontClasses}
-                disableTypography={true}
-              />
-              { prop.isLancher &&
-              
+        if (prop.isLauncher) {
+          return (
+            <a href={prop.url}  target="_blank">
+              <ListItem button className={classes.itemLink + listItemClasses}>
+                <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
+                  <prop.icon />
+                </ListItemIcon>
+                <ListItemText
+                  primary={prop.sidebarName}
+                  className={classes.itemText + whiteFontClasses}
+                  disableTypography={true}
+                />
+                <ListItemSecondaryAction>
+                    <IconButton aria-label="link" className={classes.itemIcon + whiteFontClasses}>
+                      <Launch />
+                    </IconButton>
+                  </ListItemSecondaryAction>
+              </ListItem>
+              </a>
+          );
+        } else {
+          return (
+            <NavLink
+              to={prop.path}
+              className={classes.item}
+              activeClassName="active"
+              key={key}
+            >
+              <ListItem button className={classes.itemLink + listItemClasses}>
+                <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
+                  <prop.icon />
+                </ListItemIcon>
+                <ListItemText
+                  primary={prop.sidebarName}
+                  className={classes.itemText + whiteFontClasses}
+                  disableTypography={true}
+                />
+              </ListItem>
 
-              <ListItemSecondaryAction>
-              <IconButton aria-label="link"  className={classes.itemIcon + whiteFontClasses}>
-                <Launch />
-              </IconButton>
-            </ListItemSecondaryAction>
+            </NavLink>
+          );
+        }
 
-              }
-            </ListItem>
-            
-          </NavLink>
-        );
       })}
     </List>
   );
@@ -99,7 +112,7 @@ const Sidebar = ({ ...props }) => {
         >
           {brand}
           <div className={classes.sidebarWrapper}>
-        { /* <HeaderLinks /> */ }
+            { /* <HeaderLinks /> */}
             {links}
           </div>
           {image !== undefined ? (
