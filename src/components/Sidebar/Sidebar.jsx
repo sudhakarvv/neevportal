@@ -10,6 +10,7 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  ListItemSecondaryAction
 } from "material-ui";
 
 import {
@@ -19,6 +20,7 @@ import {
 import { HeaderLinks } from "components";
 
 import sidebarStyle from "assets/jss/material-dashboard-react/sidebarStyle.jsx";
+import '../Sidebar/Sidebar.css';
 //import { Icon } from "material-ui";
 
 const Sidebar = ({ ...props }) => {
@@ -49,17 +51,13 @@ const Sidebar = ({ ...props }) => {
                 <prop.icon />
               </ListItemIcon>
               <ListItemText
-                primary={prop.sidebarName}
+                primary={prop.sidebarName }
                 className={classes.itemText + whiteFontClasses}
                 disableTypography={true}
               />
-              { prop.isLancher &&
-               <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
-              <Launch />
-              </ListItemIcon>
-              }
-            </ListItem>
-            
+               { (prop.isLancher==true)?
+              <ListItemSecondaryAction id='c-MuiListItemSecondaryAction-root-159'><i className="zmdi zmdi-collection-item"></i></ListItemSecondaryAction>:null }
+            </ListItem>           
           </NavLink>
         );
       })}
