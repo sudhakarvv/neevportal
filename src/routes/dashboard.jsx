@@ -1,6 +1,8 @@
 import DashboardPage from "views/Dashboard/Dashboard.jsx";
-import Roster from "views/Roster/Roster.jsx";
+import  Roster from "views/Roster/Roster.jsx";
+import FileExchange from "views/FileExchange/FileExchange.jsx";
 import Calender from "views/Calender/Calender.jsx";
+
 import {
   Dashboard,
   Person,
@@ -55,7 +57,7 @@ const dashboardRoutes = [
     sidebarName: "File exchange",
     navbarName: "File exchange",
     icon: CreateNewFolder,
-    component: DashboardPage
+    component: FileExchange
   },
   {
     path: "/roster",
