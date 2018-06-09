@@ -51,7 +51,7 @@ class App extends React.Component {
           routes={dashboardRoutes}
           logoText={"Neev Soft"}
           logo={logo}
-          image={image}
+           image={image}
           handleDrawerToggle={this.handleDrawerToggle}
           open={this.state.mobileOpen}
           color="blue"
