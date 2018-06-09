@@ -42,7 +42,7 @@ const Sidebar = ({ ...props }) => {
         });
         if (prop.isLauncher) {
           return (
-            <a href={prop.url}  target="_blank">
+            <a href={prop.url}  target="_blank"  key={key}>
               <ListItem button className={classes.itemLink + listItemClasses}>
                 <ListItemIcon className={classes.itemIcon + whiteFontClasses}>
                   <prop.icon />
@@ -119,7 +119,6 @@ const Sidebar = ({ ...props }) => {
           {image !== undefined ? (
             <div
               className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
             />
           ) : null}
         </Drawer>
@@ -138,7 +137,6 @@ const Sidebar = ({ ...props }) => {
           {image !== undefined ? (
             <div
               className={classes.background}
-              style={{ backgroundImage: "url(" + image + ")" }}
             />
           ) : null}
         </Drawer>
