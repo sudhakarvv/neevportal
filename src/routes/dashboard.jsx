@@ -2,6 +2,7 @@ import DashboardPage from "views/Dashboard/Dashboard.jsx";
 import  Roster from "views/Roster/Roster.jsx";
 import FileExchange from "views/FileExchange/FileExchange.jsx";
 import Calender from "views/Calender/Calender.jsx";
+import LandingView from "views/LandingView/LandingView.jsx";
 
 import {
   Dashboard,
@@ -13,13 +14,20 @@ import {
   LibraryBooks,
   BubbleChart,
   LocationOn,
-  AccessTime,
+  AccessTime,Home,
 LiveHelp,
   CreateNewFolder,
   Notifications
 } from "@material-ui/icons";
 
 const dashboardRoutes = [
+  {
+    path: "/home/landingPage",
+    sidebarName: "Home Page",
+    navbarName: "Home Desk",
+    icon: Home,
+    component: LandingView
+  },
     {
     path: "/home/servicedesk",
     sidebarName: "Service Desk",
@@ -73,7 +81,7 @@ const dashboardRoutes = [
     isLauncher: true,
     url: "http://www.google.com",
   },
-  { redirect: true, path: "/home", to: "/home/dashboard", navbarName: "Redirect" }
+  { redirect: true, path: "/home", to: "/home/landingPage", navbarName: "Redirect" }
 ];
 
 export default dashboardRoutes;
